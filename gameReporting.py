@@ -20,7 +20,7 @@ def fetchGame(game_id):
     if game:
         for comment in game['comments']:
             try:
-                # Some errors with converting the comment time to string
+                # Some errors with converting the comment time to int
                 # So a try/except block is used to catch the error
                 comment['dateCreated'] = epochDateTime(int(comment['dateCreated']))
             except:
